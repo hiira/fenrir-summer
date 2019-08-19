@@ -1,0 +1,18 @@
+body{
+    text-align: center;
+    background:#efefef;
+}
+
+#wrapper{
+    display:inline-block;
+}
+
+.shop{
+    width: 600px;
+    height:400px;
+    text-align:center;
+    display:inline-block;
+    margin:50px 100px;
+    border:solid black;
+    box-shadow: 5px 5px 5px grey;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>サマーインターン課題</title>
+    <link rel="stylesheet" href = "css/styles.css">
+</head>
+<body>
+    <h1>近くの食を探す</h1>
+    <form name="SelectDistance">
+        <p>
+            検索範囲:
+            <select id="distance">
+                <option value="1">300m</option>
+                <option value="2" selected >500m</option>
+                <option value="3">1000m</option>
+                <option value="4">2000m</option>
+                <option value="5">3000m</option>
+            </select>
+        </p>
+    </form>
+
+    <button type="button" id="search" onclick="this.disabled = true;">
+        <font size = "3.5">レストランを探す!</font>
+    </button>
+    <button type="button" id="reset">
+        <font size = "3.5">リセットする</font>
+    </button>
+
+    <div id = "wrapper">
+    </div>
+
+    <script src = "js/main.js"></script>
+</body>
+</html>
