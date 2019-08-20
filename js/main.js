@@ -39,15 +39,21 @@ search.addEventListener('click', ()=>{
 						//shopの情報をdiv要素に入れていく
 						var h1 = document.createElement('h1');
 						var p = document.createElement('p');
+						var p2 = document.createElement('p');
+						var p3 = document.createElement('p');
 						var img = document.createElement('img');
 						img.src = data.rest[i].image_url.shop_image1;
 						var shopNumber = document.getElementById("shop" + i);
 						shopNumber.appendChild(h1);
 						shopNumber.appendChild(img);
 						shopNumber.appendChild(p);
+						shopNumber.appendChild(p2);
+						shopNumber.appendChild(p3);
 	
 						h1.textContent = data.rest[i].name;
 						p.textContent = data.rest[i].address;
+						p2.textContent = data.rest[i].opentime;
+						p3.textContent = data.rest[i].tel;
 					}
 				};
 				  request.send();
