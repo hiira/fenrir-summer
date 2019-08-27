@@ -6,32 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>サマーインターン課題</title>
     <link rel="stylesheet" href = "css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
     <h1>すぐ飯！</h1>
-    <form name="SelectDistance">
-        <p>
-            検索範囲:
-            <select id="distance">
-                <option value="1">300m</option>
-                <option value="2" selected >500m</option>
-                <option value="3">1000m</option>
-                <option value="4">2000m</option>
-                <option value="5">3000m</option>
-            </select>
-        </p>
-    </form>
 
-    <button type="button" id="search" onclick="this.disabled = true;">
-        <font size = "3.5">レストランを探す!</font>
-    </button>
-    <button type="button" id="reset">
-        <font size = "3.5">リセットする</font>
-    </button>
+    <div class="container pt20">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="form-group">
+              <label class="control-label">現在位置からの範囲を選択</label>
+                <div class="select-wrap">
+                 <select name="" id="">
+                  <option value="1">300m</option>
+                  <option value="2">500m</option>
+                  <option value="3">1000m</option>
+                  <option value="4">2000m</option>
+                  <option value="5">3000m</option>
+                </select>
+              </div>
+            </div>
+           </div>
+        </div>
 
-    <div id = "wrapper">
-    </div>
+    <script src = "js/main3.js"></script>
 
-    <script src = "js/main.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
