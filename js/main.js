@@ -1,6 +1,5 @@
 'use strict';
 
-var search  = document.getElementById("search");
 search.addEventListener('click', ()=>{
 	//GeoLocation APIに対応しているかの判定
 	if( navigator.geolocation ){
@@ -13,7 +12,8 @@ search.addEventListener('click', ()=>{
 				var lat = data_geo.latitude ;
 				var lng = data_geo.longitude ;
 				var range = document.getElementById("distance").value;
-				var url = "https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=dec749fa7ffd173135ca744c9cfd3101&latitude=" + lat + "&longitude=" + lng + "&range=" + range;
+				var key = ;
+				var url = "https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=" + key "&latitude=" + lat + "&longitude=" + lng + "&range=" + range;
 				//確認用
 				console.log(lat);
 				console.log(lng);
@@ -93,10 +93,7 @@ search.addEventListener('click', ()=>{
 		alert("お使いの端末は、GeoLacation APIに対応していません。") ;
 	}
 
-});
-
 var reset  = document.getElementById("reset");
 reset.addEventListener('click', ()=>{
 	location.reload();
 });
-
