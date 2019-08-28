@@ -11,7 +11,7 @@
 				var lat = data_geo.latitude ;
 				var lng = data_geo.longitude ;
 				var range = document.getElementById("distance").value;
-				var key = "dec749fa7ffd173135ca744c9cfd3101";
+				var key = "";
 				var url = "https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=" + key　+ "&latitude=" + lat + "&longitude=" + lng + "&range=" + range;
 				//確認用
 				console.log(lat);
