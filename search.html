@@ -7,17 +7,19 @@
     <title>検索結果</title>
     <link rel = "stylesheet" href = "css/SearchStyle.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js"></script>    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js"></script>  
 </head>
 <body>
     
     <p id = "pankuzu"><a href = index.html>トップ</a> > 検索条件</p>
     <p id = "condition"></p>
     
-    <p>1～20 件を表示 ／ 全 893745 件</p>
+    <div id = "HowManyHit">
+        
+    </div>
     <div id = "shop_whole">
         
-        <div class = "shop_information_whole">
+        <!-- <div class = "shop_information_whole">
             <img src = "img/meat.jpg" class = "shop_img">
             <div class = "shop_information">
                 <span class = "shop_name">京町家　焼肉市場小路　木屋町店</span>
@@ -82,28 +84,24 @@
                                         <span class = "shop_datail"><img src = "img/SVG/address.svg" class = "icon">&nbsp;&nbsp; 京都市下京区木屋町通仏光寺上ル天王町3丁目154番地の１</span>
                                         <span class = "shop_datail"><img src = "img/SVG/phone.svg" class = "icon">&nbsp;&nbsp; 075-353-0429</span>
                                     </div>
-                            </div>
+                            </div> -->
     
 
                 
                                                 
                                             </div>
-                                            
-                                            <nav aria-label="...">
-                                                <ul class="pagination">
-                                                    <li class="page-item disabled">
-                                                        <span class="page-link">Previous</span>
-                                                    </li>
-                                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                                    <li class="page-item">
-                                                        <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
-                                                    </li>
-                                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                                    <li class="page-item">
-                                                        <span class="page-link" >Next</span>
-                                                    </li>
-                                                </ul>
+
+                                            <nav aria-label="..." id = "number">
+                                                    
+                                                            
                                             </nav>
+                                            
+                                            
+
+                                            <script type="text/html" id="hit">
+                                                lo<span><%= hit_number %><span>&nbsp;<span>/</span>&nbsp;<span><%= hit_total %></span>
+                                            </script>
+
                                             <script type="text/html" id="lodashTemplate_userData">
                                                 <div class = "shop_information_whole">
                                                     <img src = <%= shop_img %> class = "shop_img">
@@ -115,6 +113,24 @@
                                                         </div>
                                                     </div>
                                                 </script>
+
+                                             <script type="text/html" id="previous">
+                                                <ul class="pagination">
+                                                        <li class="page-item">
+                                                            <span class="page-link" id ="previous"><%= Previous %></span>
+                                                        </li>
+                                            </script>
+
+                                             <script type="text/html" id="page">
+                                                        <li class="page-item ThisNumber" id = <%= page_id %>><a class="page-link"  href = <%= link %>> <%= page_number %> </a></li>
+                                            </script>
+
+                                             <script type="text/html" id="next">
+                                                <li class="page-item">
+                                                        <span class="page-link" id = "next" ><%= Next %></span>
+                                                    </li>
+                                                </ul>
+                                            </script>
                                             <script src = "js/main2.js"></script>
                                         </body>
                                         </html>

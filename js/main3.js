@@ -13,6 +13,6 @@ button.addEventListener('click', ()=>{
     }
     console.log(range);
 
-    location.href = "search.html?range=" + range;
+    location.href = "search.html?range=" + range + "?page=1";
 
 });
