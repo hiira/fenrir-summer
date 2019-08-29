@@ -17,120 +17,47 @@
     <div id = "HowManyHit">
         
     </div>
-    <div id = "shop_whole">
-        
-        <!-- <div class = "shop_information_whole">
-            <img src = "img/meat.jpg" class = "shop_img">
+    <div id = "shop_whole">                
+    </div>
+
+        <nav aria-label="..." id = "number">
+        </nav>
+                                            
+                                            
+
+    <script type="text/html" id="hit">
+        lo<span><%= hit_number %><span>&nbsp;<span>/</span>&nbsp;<span><%= hit_total %></span>
+    </script>
+
+    <script type="text/html" id="lodashTemplate_userData">
+        <div class = "shop_information_whole">
+            <img src = <%= shop_img %> class = "shop_img">
             <div class = "shop_information">
-                <span class = "shop_name">京町家　焼肉市場小路　木屋町店</span>
-                <span class = "shop_datail"><img src = "img/SVG/san.svg" class = "icon">&nbsp;&nbsp; ランチ  11：30～15：00(LO14:00) &nbsp;&nbsp;&nbsp;&nbsp;
-                    <img src = "img/SVG/moon.svg" class = "icon">&nbsp;&nbsp; ディナー  17：30～24：00(LO23:00)</span>
-                    <span class = "shop_datail"><img src = "img/SVG/address.svg" class = "icon">&nbsp;&nbsp; 京都市下京区木屋町通仏光寺上ル天王町3丁目154番地の１</span>
-                    <span class = "shop_datail"><img src = "img/SVG/phone.svg" class = "icon">&nbsp;&nbsp; 075-353-0429</span>
+                <span class = "shop_name"><%= shop_name%></span>
+                <span class = "shop_datail"><img src = "img/SVG/open.svg" class = "icon">&nbsp;&nbsp; <%= opentime %> </span>
+                    <span class = "shop_datail"><img src = "img/SVG/address.svg" class = "icon">&nbsp;&nbsp; <%= address %> </span>
+                    <span class = "shop_datail"><img src = "img/SVG/phone.svg" class = "icon">&nbsp;&nbsp; <%= phone_number %></span>
                 </div>
             </div>
-            
-            
-            <div class = "shop_information_whole">
-                <div class = "shop_img_many" id = "shop_img_whole_1">
-                    <img src = "img/meat.jpg" class = "shop_img_main">
-                    <div class = "shop_img_under_whole">
-                        <img src = "img/meat2.jpg" class = "shop_img_under">
-                        <img src = "img/meat3.jpg" class = "shop_img_under">
-                        <img src = "img/meat4.png" class = "shop_img_under">
-                    </div>
-                </div>
-                        <div class = "shop_information">
-                                <span class = "shop_name">京町家　焼肉市場小路　木屋町店</span>
-                                <span class = "shop_datail"><img src = "img/SVG/san.svg" class = "icon">&nbsp;&nbsp; ランチ  11：30～15：00(LO14:00) &nbsp;&nbsp;&nbsp;&nbsp;
-                                    <img src = "img/SVG/moon.svg" class = "icon">&nbsp;&nbsp; ディナー  17：30～24：00(LO23:00)</span>
-                                    <span class = "shop_datail"><img src = "img/SVG/address.svg" class = "icon">&nbsp;&nbsp; 京都市下京区木屋町通仏光寺上ル天王町3丁目154番地の１</span>
-                                    <span class = "shop_datail"><img src = "img/SVG/phone.svg" class = "icon">&nbsp;&nbsp; 075-353-0429</span>
-                                </div>
-                        </div>
-                        
-            <div class = "shop_information_whole">
-                    <div class = "shop_img_many" id = "shop_img_whole_2">
-                        <img src = "img/meat.jpg" class = "shop_img_main">
-                        <div class = "shop_img_under_whole">
-                            <img src = "img/meat2.jpg" class = "shop_img_under">
-                            <img src = "img/meat3.jpg" class = "shop_img_under">
-                            <img src = "img/meat4.png" class = "shop_img_under">
-                        </div>
-                    </div>
-                            <div class = "shop_information">
-                                    <span class = "shop_name">京町家　焼肉市場小路　木屋町店</span>
-                                    <span class = "shop_datail"><img src = "img/SVG/san.svg" class = "icon">&nbsp;&nbsp; ランチ  11：30～15：00(LO14:00) &nbsp;&nbsp;&nbsp;&nbsp;
-                                        <img src = "img/SVG/moon.svg" class = "icon">&nbsp;&nbsp; ディナー  17：30～24：00(LO23:00)</span>
-                                        <span class = "shop_datail"><img src = "img/SVG/address.svg" class = "icon">&nbsp;&nbsp; 京都市下京区木屋町通仏光寺上ル天王町3丁目154番地の１</span>
-                                        <span class = "shop_datail"><img src = "img/SVG/phone.svg" class = "icon">&nbsp;&nbsp; 075-353-0429</span>
-                                    </div>
-                            </div>
+        </script>
 
-                            
-            <div class = "shop_information_whole">
-                    <div class = "shop_img_many" id = "shop_img_whole_3">
-                        <img src = "img/meat.jpg" class = "shop_img_main">
-                        <div class = "shop_img_under_whole">
-                            <img src = "img/meat2.jpg" class = "shop_img_under">
-                            <img src = "img/meat3.jpg" class = "shop_img_under">
-                            <img src = "img/meat4.png" class = "shop_img_under">
-                        </div>
-                    </div>
-                            <div class = "shop_information">
-                                    <span class = "shop_name">京町家　焼肉市場小路　木屋町店</span>
-                                    <span class = "shop_datail"><img src = "img/SVG/san.svg" class = "icon">&nbsp;&nbsp; ランチ  11：30～15：00(LO14:00) &nbsp;&nbsp;&nbsp;&nbsp;
-                                        <img src = "img/SVG/moon.svg" class = "icon">&nbsp;&nbsp; ディナー  17：30～24：00(LO23:00)</span>
-                                        <span class = "shop_datail"><img src = "img/SVG/address.svg" class = "icon">&nbsp;&nbsp; 京都市下京区木屋町通仏光寺上ル天王町3丁目154番地の１</span>
-                                        <span class = "shop_datail"><img src = "img/SVG/phone.svg" class = "icon">&nbsp;&nbsp; 075-353-0429</span>
-                                    </div>
-                            </div> -->
-    
+        <script type="text/html" id="previous">
+        <ul class="pagination">
+                <li class="page-item">
+                    <span class="page-link" id ="previous"><%= Previous %></span>
+                </li>
+    </script>
 
-                
-                                                
-                                            </div>
+        <script type="text/html" id="page">
+                <li class="page-item ThisNumber" id = <%= page_id %>><a class="page-link"  href = <%= link %>> <%= page_number %> </a></li>
+    </script>
 
-                                            <nav aria-label="..." id = "number">
-                                                    
-                                                            
-                                            </nav>
-                                            
-                                            
-
-                                            <script type="text/html" id="hit">
-                                                lo<span><%= hit_number %><span>&nbsp;<span>/</span>&nbsp;<span><%= hit_total %></span>
-                                            </script>
-
-                                            <script type="text/html" id="lodashTemplate_userData">
-                                                <div class = "shop_information_whole">
-                                                    <img src = <%= shop_img %> class = "shop_img">
-                                                    <div class = "shop_information">
-                                                        <span class = "shop_name"><%= shop_name%></span>
-                                                        <span class = "shop_datail"><img src = "img/SVG/open.svg" class = "icon">&nbsp;&nbsp; <%= opentime %> </span>
-                                                            <span class = "shop_datail"><img src = "img/SVG/address.svg" class = "icon">&nbsp;&nbsp; <%= address %> </span>
-                                                            <span class = "shop_datail"><img src = "img/SVG/phone.svg" class = "icon">&nbsp;&nbsp; <%= phone_number %></span>
-                                                        </div>
-                                                    </div>
-                                                </script>
-
-                                             <script type="text/html" id="previous">
-                                                <ul class="pagination">
-                                                        <li class="page-item">
-                                                            <span class="page-link" id ="previous"><%= Previous %></span>
-                                                        </li>
-                                            </script>
-
-                                             <script type="text/html" id="page">
-                                                        <li class="page-item ThisNumber" id = <%= page_id %>><a class="page-link"  href = <%= link %>> <%= page_number %> </a></li>
-                                            </script>
-
-                                             <script type="text/html" id="next">
-                                                <li class="page-item">
-                                                        <span class="page-link" id = "next" ><%= Next %></span>
-                                                    </li>
-                                                </ul>
-                                            </script>
-                                            <script src = "js/main2.js"></script>
-                                        </body>
-                                        </html>
+        <script type="text/html" id="next">
+        <li class="page-item">
+                <span class="page-link" id = "next" ><%= Next %></span>
+            </li>
+        </ul>
+    </script>
+    <script src = "js/main2.js"></script>
+</body>
+</html>

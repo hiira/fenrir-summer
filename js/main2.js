@@ -62,8 +62,6 @@ if( navigator.geolocation ){
             var data_geo = position.coords ;
             var lat = data_geo.latitude ;
             var lng = data_geo.longitude ;
-            console.log(lat);
-            console.log(lng);
             var page_url = page*10;
             var key = "";
             var url = "https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=" + key　+ "&latitude=" + lat + "&longitude=" + lng + "&range=" + range + "&offset=" + page_url;
@@ -98,11 +96,6 @@ if( navigator.geolocation ){
                 var $HowManyHit = document.getElementById('HowManyHit');
                 var $hit = document.getElementById('hit');
                 var complied_hit = _.template($hit.innerHTML);
-                // if(page = 1){
-                //     var page_now = "1~10件";
-                // }else{
-                //     var page_now = (page * 10 + 1) + "~" + (page * 10 + 10) + "件"; 
-                // }
                 var page_now = page * 10;
                 var page_text = (page_now - 9) + " ~ " + page_now + "件"
                 html = "";
@@ -131,13 +124,7 @@ if( navigator.geolocation ){
                 });
                 previous_html += complied_previous({"Previous": "Previous"});
                 next_html += complied_next({"Next": "Next"});
-                console.log(previous_html);
                 $number.innerHTML = previous_html + page_html + next_html;
-
-                //ページの処理
-                // for(i=1; i<=10; i++){
-                //     page_id = document.getElementById('page' + i);
-                // }
 
             };
               request.send();
@@ -176,16 +163,3 @@ else
 {
     alert("お使いの端末は、GeoLacation APIに対応していません。") ;
 }
-
-// var $previous = document.addEventListener('previous');
-// var $next = document.addEventListener('next');
-
-// $previous.addEventListener(('click'), ()=>{
-//     location.href = 'http://127.0.0.1:5500/search.html?range=4?page=' + (page - 1);
-// });
-
-// $next.addEventListener(('click'), ()=>{
-//     location.href = 'http://127.0.0.1:5500/search.html?range=4?page=' + (page + 1);
-// });
-
-    
