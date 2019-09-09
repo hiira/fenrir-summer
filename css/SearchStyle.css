@@ -16,7 +16,7 @@ body{
 
 .shop_information_whole{
     width: 1000px;
-    height: 250px;
+    /* height: 250px; */
     display: flex;
     flex-direction: row;
     border-top: solid 3px #efefef;
@@ -76,6 +76,7 @@ body{
 .shop_datail{
     font-size: 15px;
     padding-left: 40px;
+    width: 600px;
     display: flex;
     align-items: center;
 }

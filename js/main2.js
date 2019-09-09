@@ -78,13 +78,17 @@ if( navigator.geolocation ){
                 let html = "";
                 for(var i = 0; i<data.rest.length; i++){
                     var shop_img = data.rest[i].image_url.shop_image1;
+                    var opentime = data.rest[i].opentime;
                     if(shop_img === ""){
                          shop_img = "img/SVG/noImage.svg"
+                    }
+                    if(opentime === ""){
+                        opentime = "不明";
                     }
                          html += complied_shop({
                             "shop_img": shop_img,
                             "shop_name": data.rest[i].name,
-                            "opentime": data.rest[i].opentime,
+                            "opentime": opentime,
                             "address": data.rest[i].address,
                             "phone_number": data.rest[i].tel,
                         });
@@ -125,7 +129,6 @@ if( navigator.geolocation ){
                 previous_html += complied_previous({"Previous": "Previous"});
                 next_html += complied_next({"Next": "Next"});
                 $number.innerHTML = previous_html + page_html + next_html;
-
             };
               request.send();
 
@@ -163,3 +166,12 @@ else
 {
     alert("お使いの端末は、GeoLacation APIに対応していません。") ;
 }
+
+// var previous = document.getElementById('previous');
+// var next = document.getElementById('next');
+
+// console.log(previous);
+
+// previous.addEventListener('click', ()=>{
+//     location.href = "#";
+// });
